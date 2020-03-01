@@ -1,0 +1,668 @@
+Empiezo....: 10
+
+
+in Time of execute with thread : 550 microsegundos
+
+in Time of execute without it : 5 microsegundos
+
+Empiezo....: 20
+
+
+in Time of execute with thread : 1880 microsegundos
+
+in Time of execute without it : 41 microsegundos
+
+Empiezo....: 30
+
+
+in Time of execute with thread : 4147 microsegundos
+
+in Time of execute without it : 131 microsegundos
+
+Empiezo....: 40
+
+
+in Time of execute with thread : 7116 microsegundos
+
+in Time of execute without it : 309 microsegundos
+
+Empiezo....: 50
+
+
+in Time of execute with thread : 10251 microsegundos
+
+in Time of execute without it : 593 microsegundos
+
+Empiezo....: 60
+
+
+in Time of execute with thread : 14027 microsegundos
+
+in Time of execute without it : 1045 microsegundos
+
+Empiezo....: 70
+
+
+in Time of execute with thread : 20552 microsegundos
+
+in Time of execute without it : 1612 microsegundos
+
+Empiezo....: 80
+
+
+in Time of execute with thread : 25261 microsegundos
+
+in Time of execute without it : 2427 microsegundos
+
+Empiezo....: 90
+
+
+in Time of execute with thread : 38244 microsegundos
+
+in Time of execute without it : 3450 microsegundos
+
+Empiezo....: 100
+
+
+in Time of execute with thread : 49300 microsegundos
+
+in Time of execute without it : 4734 microsegundos
+
+Empiezo....: 200
+
+
+in Time of execute with thread : 246384 microsegundos
+
+in Time of execute without it : 41716 microsegundos
+
+Empiezo....: 300
+
+
+in Time of execute with thread : 307156 microsegundos
+
+in Time of execute without it : 138674 microsegundos
+
+Empiezo....: 400
+
+
+in Time of execute with thread : 626192 microsegundos
+
+in Time of execute without it : 376591 microsegundos
+
+Empiezo....: 500
+
+
+in Time of execute with thread : 1012595 microsegundos
+
+in Time of execute without it : 938444 microsegundos
+
+Empiezo....: 600
+
+
+in Time of execute with thread : 1385877 microsegundos
+
+in Time of execute without it : 1529502 microsegundos
+
+Empiezo....: 700
+
+
+in Time of execute with thread : 1970511 microsegundos
+
+in Time of execute without it : 2716790 microsegundos
+
+Empiezo....: 800
+
+
+in Time of execute with thread : 1909000 microsegundos
+
+in Time of execute without it : 4106388 microsegundos
+
+Empiezo....: 900
+
+
+in Time of execute with thread : 2837076 microsegundos
+
+in Time of execute without it : 6392432 microsegundos
+
+Empiezo....: 1000
+
+
+in Time of execute with thread : 2814735 microsegundos
+
+in Time of execute without it : 10168360 microsegundos
+
+Empiezo....: 1500
+
+
+in Time of execute with thread : 7154092 microsegundos
+
+in Time of execute without it : 34270120 microsegundos
+
+Empiezo....: 2000
+
+
+in Time of execute with thread : 10303833 microsegundos
+
+in Time of execute without it : 105653705 microsegundos
+
+Empiezo....: 2500
+
+
+in Time of execute with thread : 18878475 microsegundos
+
+in Time of execute without it : 185895388 microsegundos
+
+Empiezo....: 3000
+
+
+in Time of execute with thread : 21827276 microsegundos
+
+in Time of execute without it : 399503546 microsegundos
+
+Empiezo....: 3500
+
+
+in Time of execute with thread : 39561254 microsegundos
+
+in Time of execute without it : 539696082 microsegundos
+
+Empiezo....: 4000
+
+
+in Time of execute with thread : 53677421 microsegundos
+
+in Time of execute without it : 977520750 microsegundos
+
+Empiezo....: 10
+
+
+in Time of execute with thread : 605 microsegundos
+
+in Time of execute without it : 5 microsegundos
+
+Empiezo....: 20
+
+
+in Time of execute with thread : 1890 microsegundos
+
+in Time of execute without it : 39 microsegundos
+
+Empiezo....: 30
+
+
+in Time of execute with thread : 4069 microsegundos
+
+in Time of execute without it : 131 microsegundos
+
+Empiezo....: 40
+
+
+in Time of execute with thread : 7726 microsegundos
+
+in Time of execute without it : 310 microsegundos
+
+Empiezo....: 50
+
+
+in Time of execute with thread : 11053 microsegundos
+
+in Time of execute without it : 593 microsegundos
+
+Empiezo....: 60
+
+
+in Time of execute with thread : 15316 microsegundos
+
+in Time of execute without it : 1035 microsegundos
+
+Empiezo....: 70
+
+
+in Time of execute with thread : 20525 microsegundos
+
+in Time of execute without it : 1648 microsegundos
+
+Empiezo....: 80
+
+
+in Time of execute with thread : 30229 microsegundos
+
+in Time of execute without it : 2404 microsegundos
+
+Empiezo....: 90
+
+
+in Time of execute with thread : 38357 microsegundos
+
+in Time of execute without it : 3463 microsegundos
+
+Empiezo....: 100
+
+
+in Time of execute with thread : 50590 microsegundos
+
+in Time of execute without it : 4736 microsegundos
+
+Empiezo....: 200
+
+
+in Time of execute with thread : 234829 microsegundos
+
+in Time of execute without it : 41749 microsegundos
+
+Empiezo....: 300
+
+
+in Time of execute with thread : 268638 microsegundos
+
+in Time of execute without it : 143424 microsegundos
+
+Empiezo....: 400
+
+
+in Time of execute with thread : 597107 microsegundos
+
+in Time of execute without it : 349439 microsegundos
+
+Empiezo....: 500
+
+
+in Time of execute with thread : 1078736 microsegundos
+
+in Time of execute without it : 752443 microsegundos
+
+Empiezo....: 600
+
+
+in Time of execute with thread : 1444159 microsegundos
+
+in Time of execute without it : 1560272 microsegundos
+
+Empiezo....: 700
+
+
+in Time of execute with thread : 1997045 microsegundos
+
+in Time of execute without it : 2614435 microsegundos
+
+Empiezo....: 800
+
+
+in Time of execute with thread : 1960302 microsegundos
+
+in Time of execute without it : 4188544 microsegundos
+
+Empiezo....: 900
+
+
+in Time of execute with thread : 2916369 microsegundos
+
+in Time of execute without it : 6302302 microsegundos
+
+Empiezo....: 1000
+
+
+in Time of execute with thread : 2751170 microsegundos
+
+in Time of execute without it : 10485084 microsegundos
+
+Empiezo....: 1500
+
+
+in Time of execute with thread : 6472974 microsegundos
+
+in Time of execute without it : 36111152 microsegundos
+
+Empiezo....: 2000
+
+
+in Time of execute with thread : 10201268 microsegundos
+
+in Time of execute without it : 108948116 microsegundos
+
+Empiezo....: 2500
+
+
+in Time of execute with thread : 19603754 microsegundos
+
+in Time of execute without it : 190903115 microsegundos
+
+Empiezo....: 3000
+
+
+in Time of execute with thread : 21234658 microsegundos
+
+in Time of execute without it : 401195579 microsegundos
+
+Empiezo....: 3500
+
+
+in Time of execute with thread : 33320380 microsegundos
+
+in Time of execute without it : 535213602 microsegundos
+
+Empiezo....: 4000
+
+
+in Time of execute with thread : 60679621 microsegundos
+
+in Time of execute without it : 990020802 microsegundos
+
+Empiezo....: 10
+
+
+in Time of execute with thread : 524 microsegundos
+
+in Time of execute without it : 5 microsegundos
+
+Empiezo....: 20
+
+
+in Time of execute with thread : 1832 microsegundos
+
+in Time of execute without it : 43 microsegundos
+
+Empiezo....: 30
+
+
+in Time of execute with thread : 4296 microsegundos
+
+in Time of execute without it : 131 microsegundos
+
+Empiezo....: 40
+
+
+in Time of execute with thread : 7457 microsegundos
+
+in Time of execute without it : 305 microsegundos
+
+Empiezo....: 50
+
+
+in Time of execute with thread : 10627 microsegundos
+
+in Time of execute without it : 592 microsegundos
+
+Empiezo....: 60
+
+
+in Time of execute with thread : 15786 microsegundos
+
+in Time of execute without it : 1061 microsegundos
+
+Empiezo....: 70
+
+
+in Time of execute with thread : 20378 microsegundos
+
+in Time of execute without it : 1636 microsegundos
+
+Empiezo....: 80
+
+
+in Time of execute with thread : 28200 microsegundos
+
+in Time of execute without it : 2426 microsegundos
+
+Empiezo....: 90
+
+
+in Time of execute with thread : 40646 microsegundos
+
+in Time of execute without it : 3458 microsegundos
+
+Empiezo....: 100
+
+
+in Time of execute with thread : 48898 microsegundos
+
+in Time of execute without it : 4786 microsegundos
+
+Empiezo....: 200
+
+
+in Time of execute with thread : 178991 microsegundos
+
+in Time of execute without it : 41669 microsegundos
+
+Empiezo....: 300
+
+
+in Time of execute with thread : 272303 microsegundos
+
+in Time of execute without it : 141395 microsegundos
+
+Empiezo....: 400
+
+
+in Time of execute with thread : 628630 microsegundos
+
+in Time of execute without it : 358237 microsegundos
+
+Empiezo....: 500
+
+
+in Time of execute with thread : 1042723 microsegundos
+
+in Time of execute without it : 749596 microsegundos
+
+Empiezo....: 600
+
+
+in Time of execute with thread : 1499243 microsegundos
+
+in Time of execute without it : 1575594 microsegundos
+
+Empiezo....: 700
+
+
+in Time of execute with thread : 2021815 microsegundos
+
+in Time of execute without it : 2585042 microsegundos
+
+Empiezo....: 800
+
+
+in Time of execute with thread : 1986759 microsegundos
+
+in Time of execute without it : 4072687 microsegundos
+
+Empiezo....: 900
+
+
+in Time of execute with thread : 2711707 microsegundos
+
+in Time of execute without it : 6426292 microsegundos
+
+Empiezo....: 1000
+
+
+in Time of execute with thread : 2676778 microsegundos
+
+in Time of execute without it : 9989995 microsegundos
+
+Empiezo....: 1500
+
+
+in Time of execute with thread : 7149842 microsegundos
+
+in Time of execute without it : 35139653 microsegundos
+
+Empiezo....: 2000
+
+
+in Time of execute with thread : 9551823 microsegundos
+
+in Time of execute without it : 108973895 microsegundos
+
+Empiezo....: 2500
+
+
+in Time of execute with thread : 19077575 microsegundos
+
+in Time of execute without it : 192143863 microsegundos
+
+Empiezo....: 3000
+
+
+in Time of execute with thread : 21369728 microsegundos
+
+Empiezo....: 10
+
+
+in Time of execute with thread : 797 microsegundos
+
+in Time of execute without it : 8 microsegundos
+
+Empiezo....: 20
+
+
+in Time of execute with thread : 1987 microsegundos
+
+in Time of execute without it : 39 microsegundos
+
+Empiezo....: 30
+
+
+in Time of execute with thread : 4318 microsegundos
+
+in Time of execute without it : 131 microsegundos
+
+Empiezo....: 40
+
+
+in Time of execute with thread : 7696 microsegundos
+
+in Time of execute without it : 305 microsegundos
+
+Empiezo....: 50
+
+
+in Time of execute with thread : 10934 microsegundos
+
+in Time of execute without it : 596 microsegundos
+
+Empiezo....: 60
+
+
+in Time of execute with thread : 15070 microsegundos
+
+in Time of execute without it : 1029 microsegundos
+
+Empiezo....: 70
+
+
+in Time of execute with thread : 22287 microsegundos
+
+in Time of execute without it : 1614 microsegundos
+
+Empiezo....: 80
+
+
+in Time of execute with thread : 31343 microsegundos
+
+in Time of execute without it : 2429 microsegundos
+
+Empiezo....: 90
+
+
+in Time of execute with thread : 32952 microsegundos
+
+in Time of execute without it : 3442 microsegundos
+
+Empiezo....: 100
+
+
+in Time of execute with thread : 48275 microsegundos
+
+in Time of execute without it : 4717 microsegundos
+
+Empiezo....: 200
+
+
+in Time of execute with thread : 255244 microsegundos
+
+in Time of execute without it : 40741 microsegundos
+
+Empiezo....: 300
+
+
+in Time of execute with thread : 266258 microsegundos
+
+in Time of execute without it : 142125 microsegundos
+
+Empiezo....: 400
+
+
+in Time of execute with thread : 609990 microsegundos
+
+in Time of execute without it : 350718 microsegundos
+
+Empiezo....: 500
+
+
+in Time of execute with thread : 1094909 microsegundos
+
+in Time of execute without it : 823684 microsegundos
+
+Empiezo....: 600
+
+
+in Time of execute with thread : 1301213 microsegundos
+
+in Time of execute without it : 1990613 microsegundos
+
+Empiezo....: 700
+
+
+in Time of execute with thread : 1985213 microsegundos
+
+in Time of execute without it : 2763416 microsegundos
+
+Empiezo....: 800
+
+
+in Time of execute with thread : 1783242 microsegundos
+
+in Time of execute without it : 4053470 microsegundos
+
+Empiezo....: 900
+
+
+in Time of execute with thread : 2779782 microsegundos
+
+in Time of execute without it : 6372946 microsegundos
+
+Empiezo....: 1000
+
+
+in Time of execute with thread : 2946214 microsegundos
+
+in Time of execute without it : 10467107 microsegundos
+
+Empiezo....: 1500
+
+
+in Time of execute with thread : 6925102 microsegundos
+
+in Time of execute without it : 36223088 microsegundos
+
+Empiezo....: 2000
+
+
+in Time of execute with thread : 10143866 microsegundos
+
+in Time of execute without it : 109145299 microsegundos
+
+Empiezo....: 2500
+
+
+in Time of execute with thread : 19262192 microsegundos
+
+in Time of execute without it : 191055984 microsegundos
+
+Empiezo....: 3000
+
+
+in Time of execute with thread : 22349039 microsegundos
+
