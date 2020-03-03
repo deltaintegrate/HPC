@@ -42,7 +42,7 @@ int main (int argc, char** argv) {
 	}
 	else {					// Lógica del Padre
 		for (int i=0; i<PROC; i++) {		// esperamos a que todos los hijos terminen (código mejorado)
-    		if ((wpid = wait(NULL)) >= 0) {
+    		if ((int wpid = wait(NULL)) >= 0) {
     			cout << "Proceso " << wpid << " terminado" << endl;
     		}
     	}
