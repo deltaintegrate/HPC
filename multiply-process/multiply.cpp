@@ -14,6 +14,15 @@
 #include <mutex>
 #include <time.h>
 #include "Threadpool.h"
+//process
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <unistd.h>
+#include "err.h"
+
  
 using namespace std;
  
@@ -26,51 +35,58 @@ int GetRandom(int max){
     return rand() % max;
 }
 
-std::string GetTime(){
-    auto nowtime = std::chrono::system_clock::now();
-    std::time_t sleeptime = 
-                std::chrono::system_clock::to_time_t(nowtime);
-    return std::ctime(&sleeptime);
+string GetTime(){
+    auto nowtime = chrono::system_clock::now();
+    time_t sleeptime = 
+                chrono::system_clock::to_time_t(nowtime);
+    return ctime(&sleeptime);
 }
-
-
-/*
-void ExecuteThread(int id){
-    
-    auto nowtime = std::chrono::system_clock::now();
-    std::time_t sleeptime = 
-                std::chrono::system_clock::to_time_t(nowtime);
-    tm myLocalTime = *localtime(&sleeptime);
-
-    cout << "thread" << id << "Sleep time: " << std::ctime(&sleeptime) << "\n";
-    cout << "Month" << myLocalTime.tm_mon << "\n";
-    cout << "Day" << myLocalTime.tm_mday << "\n";
-    cout << "Year" << myLocalTime.tm_year + 1900<< "\n";
-    cout << "Hours" << myLocalTime.tm_hour << "\n";
-    cout << "Minute" << myLocalTime.tm_min << "\n";
-    cout << "second" << myLocalTime.tm_sec << "\n";
-
-    std:: this_thread::sleep_for(std::chrono::seconds(GetRandom(3)));
-    nowtime = std::chrono::system_clock::now(); 
-    sleeptime = std::chrono::system_clock::to_time_t(nowtime);
-    cout << "thread" << id << "Awake time: " << std::ctime(&sleeptime) << "\n";
-}
-*/
 
 int main(int argcv, char * argv[]) {
  
     //ifstream label1 ("datos//datos.in"); // Abre el archivo de entrada de datos
     // Definición de variables y asignación dinámica de memoria
-    unsigned int nthreads = std::thread::hardware_concurrency();
     srand (time(NULL));
     int i, j, k, N;
     int **A, **B, **C;
     int timeser,timethr;
-;
+    unsigned int No = thread::hardware_concurrency();
     
     N = stoi(argv[1]);
     cout << "Empiezo....: " << N;
     A = new int* [N], B = new int* [N], C = new int* [N];
+    int segment_id;
+    char* shared_memory;
+    struct shmid_ds shmbuffer;
+    int segment_size;
+    const int shared_segment_size = 0x6400;
+
+    /* Allocate a shared memory segment. */
+    segment_id = shmget (IPC_PRIVATE, shared_segment_size,
+    IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR);
+    /* Attach the shared memory segment. */
+    shared_memory = (char*) shmat (segment_id, 0, 0);
+    printf ("shared memory attached at address %p\n", shared_memory);
+    /* Determine the segment"s size. */
+    shmctl (segment_id, IPC_STAT, &shmbuffer);
+    segment_size = shmbuffer.shm_segsz;
+    printf ("segment size: %d\n", segment_size);
+    /* Write a string to the shared memory segment. */
+    sprintf (shared_memory, "Hello, world.");
+    /* Detach the shared memory segment. */
+    shmdt (shared_memory);
+    pid_t childrenhood;
+    for (int g=0; g< No ;g++){
+        childrenhood = fork();
+        if (childrenhood != 0){
+            cout << "i'm your motherfucking father" << getpid() << endl;
+            break;
+
+        }else{
+            cout << "I'm the slut son " << getpid() << endl;
+        }
+        
+    }
 
     for(j=0; j<N; j++){
         A[j] = new int [N], B[j] = new int [N], C[j] = new int [N];
@@ -87,12 +103,7 @@ int main(int argcv, char * argv[]) {
             B[i][j] = rand() % 150;        
         }
     }
-    /* USE OF THREAD  BY EXAMPLE
-    thread th1(ExecuteThread,1);
-    th1.join();
-    thread th2(ExecuteThread,2);
-    th2.join();
-    */
+
     cout <<endl; cout <<endl; cout << endl;
     //multiplicacion con hilos
     multmat(A,B,C,N,timethr);       
@@ -111,30 +122,23 @@ int main(int argcv, char * argv[]) {
 // HILOS
 
 void multmat(int **A, int **B, int **C, int N, int time){
-    ThreadPool pool(thread::hardware_concurrency());
-    auto start = std::chrono::high_resolution_clock::now();
+    auto start = chrono::high_resolution_clock::now();
     int j, k;
         for(int i=0; i<N; i++){
             for(int j=0; j<N; j++){
-                vector<future<int>> results;
-                results.emplace_back(pool.enqueue([A,B,C,N,i,j] {
                 C[i][j]=0;         
                 for(int k=0; k<N; k++){
 
                     C[i][j]= C[i][j]+A[i][k]*B[k][j];
-                }
-                return 1;
-                                                            })
-                
-                                    );
+                }                                  
 
             }
         }
            
         
     
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    auto stop = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
     cout << "in Time of execute with thread "<< ": "<< duration.count() <<" microsegundos" <<endl <<endl;
     time = duration.count();
 }
@@ -142,7 +146,7 @@ void multmat(int **A, int **B, int **C, int N, int time){
 //serializacion
 
 void multmatseri(int **A, int **B, int **C, int N,int time){
-    auto start = std::chrono::high_resolution_clock::now();
+    auto start = chrono::high_resolution_clock::now();
     int i, j, k;
         for(i=0; i<N; i++){
             for(int j=0; j<N; j++){
@@ -152,13 +156,11 @@ void multmatseri(int **A, int **B, int **C, int N,int time){
                 }
             }
         }
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    auto stop = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
     cout << "in Time of execute without it "<< ": "<< duration.count() <<" microsegundos" <<endl <<endl;
     time = duration.count();
 }
-
-
 
 
 

@@ -1,54 +1,34 @@
-/*
-	Crear "n" procesos con fork() en C++
-	por Daniel Gacitúa
-	<danielgacituav@gmail.com>
-*/
-
+#include <string>
 #include <iostream>
-#include <cstring>
-#include <cstdlib>
-#include <cerrno>
-#include <cstdio>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <fcntl.h>
+#include "err.h"
+
+// Set DEPTH to desired value
+
+#define DEPTH 4
+
 
 using namespace std;
 
-int main (int argc, char** argv) {
-	static const int PROC = 5;		// PROC fija la cantidad de procesos a crear
+int main ()
+{
+  pid_t pid;
+  int i;
 
-	int status, procNum;			// procNum almacena el número del proceso
-	pid_t pid;
+  cout << "My process id = " << getpid() << endl;
 
-	for (procNum=0; procNum<PROC; procNum++) {
-		pid = fork();				// se hace fork()
-		
-		if (pid==0) {				// si el proceso se crea bien, terminamos el ciclo for
-			break;
-		}
-		else if (pid==-1) {			// si hay error, se aborta la operación
-			perror("ERROR al hacer fork()");
-			exit(1);
-			break;
-		}
-	}
+  for (i=1 ; i <= DEPTH ; i++) {
 
-	if (pid==0) {			// Lógica del Hijo
-		cout << "soy el proceso " << procNum << " " << getpid() << endl;
-		exit(0);
-	}
-	else {					// Lógica del Padre
-		for (int i=0; i<PROC; i++) {		// esperamos a que todos los hijos terminen (código mejorado)
-    		if ((int wpid = wait(NULL)) >= 0) {
-    			cout << "Proceso " << wpid << " terminado" << endl;
-    		}
-    	}
+    pid = fork();    // Fork
 
-		cout << "Soy el padre " << getpid() << endl;
-	}
+    if ( pid ) {
+       break;        // Don't give the parent a chance to fork again
+    }
+    cout << "Child #" << getpid() << endl; // Child can keep going and fork once
+  }
 
-	return 0;		// Fin del programa
+  wait(NULL);        // Don't let a parent ending first end the tree below
+  return 0;
 }
